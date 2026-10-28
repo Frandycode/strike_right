@@ -83,9 +83,9 @@ From the project root, after installing the test/tooling dependencies:
 npx --prefix tests --no-install wrangler deploy --dry-run --config wrangler.jsonc
 ```
 
-Automatic deployments use Cloudflare Workers Builds connected to `Frandycode/strike_right`, with `main` as the production branch and the project root as the root directory. Use `npm ci --prefix tests` as the build command and `npx wrangler deploy` as the deploy command. Automatic deployment becomes active after the existing Worker is connected in the Cloudflare dashboard. Non-production branch previews are enabled there separately. Keep `strikeright.app` attached to the existing Worker.
+Cloudflare Workers Builds is connected to `Frandycode/strike_right`, with `main` as the production branch and `/` as the root directory. Leave the build command empty and use `npx wrangler deploy` as the production deploy command. Preview builds run through Workers Builds using `npx wrangler preview`, with preview URLs enabled; `"previews": {}` in `wrangler.jsonc` enables the preview configuration. Keep `strikeright.app` attached to the existing Worker.
 
-The GitHub Actions workflow runs tests on every pull request and push to `main`, and uploads `tests/results/run.txt` as an artifact even if tests fail. It does not deploy and requires no Cloudflare secrets. Workers Builds handles deployment authentication in Cloudflare.
+The GitHub Actions workflow runs tests on every pull request and push to `main`, and uploads `tests/results/run.txt` as an artifact even if tests fail. It does not deploy and requires no Cloudflare secrets. Workers Builds authenticates deployments with a dedicated Workers Builds API token configured in Cloudflare.
 
 ## Branch workflow
 

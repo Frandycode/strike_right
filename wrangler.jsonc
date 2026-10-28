@@ -6,6 +6,7 @@
   "$schema": "./tests/node_modules/wrangler/config-schema.json",
   "name": "strike-right",
   "compatibility_date": "2025-10-01",
+  "previews": {},
   "assets": {
     "directory": "./public"
   }
