@@ -1,0 +1,130 @@
+<!doctype html>
+<!--
+  Author: Frandy Slueue | Alias: CodeBreeder | Title: Software Engineering · DevOps Security · IT Ops
+  Portfolio: https://frandycode.dev | GitHub: https://github.com/frandycode
+  Email: frandyslueue@gmail.com | Location: Tulsa, OK & Dallas, TX (Central Time)
+  Project: Strike Right — Letter builder page
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title data-i18n="t.letters">Letters · Strike Right</title>
+<meta name="description" content="Build ready-to-send business letters and emails: advising requests, pilot proposals, letters of intent, program inquiries and more.">
+<link rel="canonical" href="https://strikeright.app/letters/">
+<link rel="alternate" hreflang="en" href="https://strikeright.app/letters/">
+<link rel="alternate" hreflang="es" href="https://strikeright.app/letters/?lang=es">
+<link rel="alternate" hreflang="x-default" href="https://strikeright.app/letters/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Strike Right">
+<meta property="og:title" content="Letters · Strike Right">
+<meta property="og:description" content="Build ready-to-send business letters and emails: advising requests, pilot proposals, letters of intent, program inquiries and more.">
+<meta property="og:url" content="https://strikeright.app/letters/">
+<meta property="og:image" content="https://strikeright.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Strike Right logo with the tagline: Start your business the right way.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Letters · Strike Right">
+<meta name="twitter:description" content="Build ready-to-send business letters and emails: advising requests, pilot proposals, letters of intent, program inquiries and more.">
+<meta name="twitter:image" content="https://strikeright.app/og-image.png">
+<meta name="twitter:image:alt" content="Strike Right logo with the tagline: Start your business the right way.">
+<meta name="theme-color" content="#e6ede8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b100e" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script src="/boot.js"></script>
+<script defer src="/js/es/core.js"></script>
+<script defer src="/js/es/letters.js"></script>
+<script defer src="/js/data.js"></script>
+<script defer src="/js/core.js"></script>
+<script defer src="/js/layout.js"></script>
+<script defer src="/js/letters.js"></script>
+<!-- Cloudflare Web Analytics beacon; the token comes from the Cloudflare dashboard -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ad37b2ec630a48abbdf9363bae0bf754"}'></script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+<header class="site-band top-band gut" id="top"><div class="wrap top-row">
+  <a class="brand" href="/" aria-label="Strike Right home" data-i18n-attr="aria-label=a.home"><svg class="mark mark-head" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="17" width="4.6" height="11" rx="1.2" class="mk-a"/><rect x="7.8" y="21.5" width="4.6" height="6.5" rx="1.2" class="mk-a"/><rect x="13.6" y="15" width="4.6" height="13" rx="1.2" class="mk-a"/><rect x="19.4" y="9" width="4.6" height="19" rx="1.2" class="mk-a"/><rect x="25.2" y="3" width="4.6" height="25" rx="1.2" class="mk-b"/></svg><span>Strike <em>Right</em></span></a>
+  <div class="top-tools">
+    <button type="button" class="chip js-only" id="profileBtn" aria-haspopup="dialog" aria-expanded="false" aria-controls="profilePanel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><span class="chip-text" id="chipText">Your business</span><span class="edit" data-i18n="pp.edit">Edit</span></button>
+    <div class="theme js-only" role="group" aria-label="Language" data-i18n-attr="aria-label=a.lang"><button type="button" data-lang-set="en" lang="en">English</button><button type="button" data-lang-set="es" lang="es">Español</button></div>
+    <div class="theme js-only" role="group" aria-label="Color theme" data-i18n-attr="aria-label=a.theme"><button type="button" data-theme-set="light" data-i18n="th.light">Light</button><button type="button" data-theme-set="dark" data-i18n="th.dark">Dark</button><button type="button" data-theme-set="auto" data-i18n="th.auto">Auto</button></div>
+    <button type="button" class="menu-btn js-only" id="menuBtn" aria-expanded="false" aria-controls="menuPanel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span data-i18n="mn.menu">Menu</span></button>
+  </div>
+</div></header>
+<nav class="nav gut" aria-label="Main" data-i18n-attr="aria-label=a.main"><div class="wrap" id="navlinks"><a href="/" data-i18n="nv.home">Home</a><a href="/checklist/" data-i18n="nv.checklist">Checklist</a><a href="/help/" data-i18n="nv.help">Free help</a><a href="/llc/" data-i18n="nv.llc">LLC by state</a><a href="/selling/" data-i18n="nv.selling">Selling</a><a href="/grow/" data-i18n="nv.grow">Get known</a><a href="/letters/" data-i18n="nv.lettersShort" aria-current="page">Letters</a><a href="/guides/" data-i18n="nv.guides">Guides</a></div></nav>
+<div class="site-band gut"><div class="wrap page-head">
+  <noscript><p class="noscript-msg">Turn on JavaScript to tailor this guide to your state and business type.</p></noscript>
+  <nav class="crumbs" aria-label="Breadcrumb" data-i18n-attr="aria-label=a.crumbs"><a href="/" data-i18n="nv.home">Home</a> <span aria-hidden="true">/</span> <span aria-current="page" data-i18n="nv.letters">Letter builder</span></nav>
+  <div class="kicker" data-i18n="lt.kicker">Ready to send</div>
+  <h1 data-i18n="lt.h2">Business letter builder</h1>
+  <p class="lead" data-i18n="lt.lead">Pick a letter, fill in the details and copy a finished business letter or email. It uses the state, city and business type from your profile.</p>
+</div></div>
+<div class="gut"><main class="wrap" id="main" tabindex="-1">
+<section id="letters">
+  <div class="letter-grid js-only">
+    <div class="panel pad">
+      <div class="form" id="letterForm">
+        <div class="field full"><label for="lType" data-i18n="lt.type">Letter type</label><select id="lType">
+          <option value="advice" data-i18n="lo.advice">Request for free advising</option>
+          <option value="pilot" data-i18n="lo.pilot">Pilot proposal to a potential customer</option>
+          <option value="intro" data-i18n="lo.intro">Introduction to a potential customer</option>
+          <option value="partner" data-i18n="lo.partner">Partnership or sponsorship request</option>
+          <option value="loi" data-i18n="lo.loi">Letter of intent (for a customer to sign)</option>
+          <option value="program" data-i18n="lo.program">Grant or program inquiry</option>
+          <option value="followup" data-i18n="lo.followup">Follow-up after a meeting</option>
+        </select><span class="hint" id="lTypeHint"></span></div>
+        <div class="field"><label for="lName" data-i18n="lt.name">Your name</label><input id="lName" type="text" autocomplete="name"></div>
+        <div class="field"><label for="lTitle" data-i18n="lt.title">Your title</label><input id="lTitle" type="text" placeholder="Founder" data-i18n-attr="placeholder=ph.title"></div>
+        <div class="field"><label for="lBiz" data-i18n="lt.biz">Business name</label><input id="lBiz" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="lContact" data-i18n="lt.contact">Email and/or phone</label><input id="lContact" type="text"></div>
+        <div class="field full"><label for="lWhat" data-i18n="lt.what">What you offer, in one phrase</label><input id="lWhat" type="text" placeholder="e.g. a scheduling app that cuts no-shows for small clinics" data-i18n-attr="placeholder=ph.what"></div>
+        <div class="field"><label for="lToName" data-i18n="lt.toName">Recipient name</label><input id="lToName" type="text"></div>
+        <div class="field"><label for="lToTitle" data-i18n="lt.toTitle">Recipient title</label><input id="lToTitle" type="text"></div>
+        <div class="field full"><label for="lToOrg" data-i18n="lt.toOrg">Recipient organization</label><input id="lToOrg" type="text"></div>
+        <div class="full form" id="extraWrap"></div>
+      </div>
+    </div>
+    <div class="paper-wrap">
+      <div class="paper" id="letterOut" aria-live="polite"></div>
+      <div class="row"><button type="button" class="btn primary" id="copyLetter" data-i18n="lt.copy">Copy letter</button><button type="button" class="btn" id="copyEmail" data-i18n="lt.copyEmail">Copy as email</button><button type="button" class="btn" id="clearLetter" data-i18n="lt.clear">Clear fields</button><button type="button" class="btn" data-print-target="letters" data-i18n="pr.btn">Print or save as PDF</button><span class="status-msg" id="letterMsg" role="status"></span></div>
+      <p class="small muted" data-i18n="lt.note">Blanks show as [brackets] until you fill them in. Letters of intent are written as non-binding; have anything binding reviewed by a lawyer or a free legal clinic.</p>
+    </div>
+  </div>
+  <div class="panel pad stack nojs-only">
+    <h2 class="h3">Seven letter templates</h2>
+    <ul class="clean"><li>Request for free advising</li><li>Pilot proposal to a potential customer</li><li>Introduction to a potential customer</li><li>Partnership or sponsorship request</li><li>Letter of intent (for a customer to sign)</li><li>Grant or program inquiry</li><li>Follow-up after a meeting</li></ul>
+  </div>
+</section>
+<nav class="pager" aria-label="Previous and next pages" data-i18n-attr="aria-label=a.pager"><a class="panel prev" href="/grow/" rel="prev"><span class="k" data-i18n="pg.prev">← Previous</span><span class="t" data-i18n="nv.grow">Get known</span></a><a class="panel next" href="/guides/" rel="next"><span class="k" data-i18n="pg.next">Next →</span><span class="t" data-i18n="nv.guides">Guides</span></a></nav>
+</main></div>
+
+<footer class="gut"><div class="wrap">
+  <div class="fgrid">
+    <div class="fbrand">
+      <a class="brand" href="/"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="17" width="4.6" height="11" rx="1.2" class="mk-a"/><rect x="7.8" y="21.5" width="4.6" height="6.5" rx="1.2" class="mk-a"/><rect x="13.6" y="15" width="4.6" height="13" rx="1.2" class="mk-a"/><rect x="19.4" y="9" width="4.6" height="19" rx="1.2" class="mk-a"/><rect x="25.2" y="3" width="4.6" height="25" rx="1.2" class="mk-b"/></svg><span>Strike <em>Right</em></span></a>
+      <p data-i18n="ft.p">A free guide to starting any kind of business in any U.S. state. Start with free advice, confirm the rules where you live, and spend carefully.</p>
+    </div>
+    <nav class="fcol" aria-label="Guide" data-i18n-attr="aria-label=ft.guide"><h2 data-i18n="ft.guide">Guide</h2><ul>
+      <li><a href="/checklist/" data-i18n="nv.checklist">Checklist</a></li><li><a href="/help/" data-i18n="nv.help">Free help</a></li><li><a href="/llc/" data-i18n="nv.llc">LLC by state</a></li><li><a href="/selling/" data-i18n="nv.states">Selling across states</a></li><li><a href="/grow/" data-i18n="nv.grow">Get known</a></li><li><a href="/letters/" data-i18n="nv.lettersShort">Letters</a></li><li><a href="/guides/" data-i18n="nv.guides">Guides</a></li><li><a href="/about/" data-i18n="nv.about">About</a></li>
+    </ul></nav>
+    <nav class="fcol" aria-label="Official resources" data-i18n-attr="aria-label=ft.official"><h2 data-i18n="ft.official">Official resources</h2><ul>
+      <li><a href="https://www.sba.gov/business-guide" target="_blank" rel="noopener" data-i18n="ft.sba">SBA Business Guide ↗</a></li>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" target="_blank" rel="noopener" data-i18n="ft.ein">IRS: free EIN ↗</a></li>
+      <li><a href="https://www.nass.org/initiatives/business-services" target="_blank" rel="noopener" data-i18n="ft.nass">State filing offices ↗</a></li>
+      <li><a href="https://americassbdc.org" target="_blank" rel="noopener" data-i18n="ft.sbdc">Find your SBDC ↗</a></li>
+    </ul></nav>
+  </div>
+  <div class="credits"><span>© 2026 CodeBreeder LLC. All Rights Reserved.</span></div>
+</div></footer>
+
+<button type="button" class="to-top" id="toTop" aria-label="Back to top" title="Back to top" data-i18n-attr="aria-label=a.top,title=a.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+</body>
+</html>

@@ -20,4 +20,116 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/?lang=es"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/"/>
   </url>
+  <url>
+    <loc>https://strikeright.app/checklist/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/checklist/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/checklist/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/checklist/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/checklist/?lang=es</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/checklist/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/checklist/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/checklist/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/help/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/help/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/help/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/help/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/help/?lang=es</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/help/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/help/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/help/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/llc/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/llc/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/llc/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/llc/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/llc/?lang=es</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/llc/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/llc/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/llc/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/selling/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/selling/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/selling/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/selling/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/selling/?lang=es</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/selling/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/selling/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/selling/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/grow/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/grow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/grow/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/grow/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/grow/?lang=es</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/grow/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/grow/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/grow/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/letters/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/letters/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/letters/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/letters/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/letters/?lang=es</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/letters/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/letters/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/letters/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/guides/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/guides/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/guides/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/guides/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/guides/?lang=es</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/guides/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/guides/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/guides/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/about/</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/about/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/about/"/>
+  </url>
+  <url>
+    <loc>https://strikeright.app/about/?lang=es</loc>
+    <lastmod>2026-10-27</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://strikeright.app/about/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://strikeright.app/about/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://strikeright.app/about/"/>
+  </url>
 </urlset>

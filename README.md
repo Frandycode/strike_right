@@ -7,7 +7,7 @@ Project: Strike Right — repository guide
 
 # Strike Right
 
-Strike Right is a free, single-page guide to starting a business in any U.S. state. It provides a tailored checklist, state LLC fees and requirements, sales-tax nexus guidance, business resources, letter templates and funding information in English and Spanish. Choices, checkmarks and letter drafts are saved in the visitor's browser.
+Strike Right is a free, multi-page guide to starting a business in any U.S. state. It provides a tailored checklist, state LLC fees and requirements, sales-tax nexus guidance, business resources, letter templates and funding information in English and Spanish. Choices, checkmarks and letter drafts are saved in the visitor's browser.
 
 Live site: **https://strikeright.app**
 
@@ -15,10 +15,19 @@ Live site: **https://strikeright.app**
 
 ```text
 public/                     Deployable static assets only
-  index.html                Page markup and metadata
-  boot.js                   First-paint script detection
-  app.js                    Application logic and English content
-  i18n-es.js                Spanish translations
+  index.html                Home: tailoring form, progress and Start here cards
+  checklist/ help/ llc/ selling/ grow/ letters/ guides/ about/
+                            One index.html per page, served at clean URLs (/llc/ …)
+  404.html                  Not-found page (wrangler not_found_handling)
+  boot.js                   First paint: script detection and old /#anchor redirects
+  js/data.js                Shared data: states, types, LLC table, nexus, ZIP ranges
+  js/resources.js           Resource directory (national, OK, Tulsa, TX, Dallas)
+  js/core.js                Saved state, share links, language, print, theme, helpers
+  js/layout.js              Header: tailoring form, profile panel, mobile menu, logo
+  js/plan.js                Checklist builder (Home and Checklist)
+  js/home.js, js/checklist.js, js/help.js, js/llc.js, js/selling.js, js/grow.js, js/letters.js
+                            One small script per page
+  js/es/                    Spanish: core.js plus one file per page
   styles.css                Screen and print styles
   _headers                  Security headers
   robots.txt, sitemap.xml    Crawler rules and sitemap
@@ -86,6 +95,10 @@ npx --prefix tests --no-install wrangler deploy --dry-run --config wrangler.json
 Cloudflare Workers Builds is connected to `Frandycode/strike_right`, with `main` as the production branch and `/` as the root directory. Leave the build command empty and use `npx wrangler deploy` as the production deploy command. Preview builds run through Workers Builds using `npx wrangler preview`, with preview URLs enabled; `"previews": {}` in `wrangler.jsonc` enables the preview configuration. Keep `strikeright.app` attached to the existing Worker.
 
 The GitHub Actions workflow runs tests on every pull request and push to `main`, and uploads `tests/results/run.txt` as an artifact even if tests fail. It does not deploy and requires no Cloudflare secrets. Workers Builds authenticates deployments with a dedicated Workers Builds API token configured in Cloudflare.
+
+### Not-found page
+
+Unknown paths are served `public/404.html` with HTTP status 404 (`not_found_handling: "404-page"` in `wrangler.jsonc`). When the error page itself is requested directly (`/404`, or `/404.html`, which redirects to `/404`), Cloudflare serves it with status 200. So it is kept out of search another way: the page carries `<meta name="robots" content="noindex">`, `_headers` adds `X-Robots-Tag: noindex` for `/404` and `/404.html`, and it is not listed in `sitemap.xml`.
 
 ## Branch workflow
 

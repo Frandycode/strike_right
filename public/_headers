@@ -9,3 +9,9 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
   X-Frame-Options: DENY
   Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'none'
+
+# The error page itself, when requested directly (Cloudflare serves it with 200): keep it out of search
+/404
+  X-Robots-Tag: noindex
+/404.html
+  X-Robots-Tag: noindex
