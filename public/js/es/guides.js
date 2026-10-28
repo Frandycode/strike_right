@@ -1,0 +1,50 @@
+/*
+   Author: Frandy Slueue | Alias: CodeBreeder | Title: Software Engineering · DevOps Security · IT Ops
+   Portfolio: https://frandycode.dev | GitHub: https://github.com/frandycode
+   Email: frandyslueue@gmail.com | Location: Tulsa, OK & Dallas, TX (Central Time)
+   Project: Strike Right — Spanish (Español): Guides page text (structures, funding, FAQ)
+*/
+(function(E){
+"use strict";
+const tgs=x=>`<span class="tag">${x}</span>`;
+const esc=x=>String(x).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+Object.assign(E.html,{
+  "sc.kicker":"Decida antes de presentar","sc.h2":"Estructuras de negocio comparadas","sc.lead":"Puede empezar con algo sencillo y cambiar después. Pregunte a un asesor gratuito cuál le conviene antes de pagar cualquier tarifa.",
+  "sc.table":`<thead><tr><th scope="col">Estructura</th><th scope="col">Conviene para</th><th scope="col">Responsabilidad personal</th><th scope="col">Registro y mantenimiento</th><th scope="col">Impuestos (por defecto)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Sole proprietorship (empresa individual)</th><td data-label="Conviene para">Probar una idea solo, trabajo de bajo riesgo</td><td data-label="Responsabilidad">Usted responde personalmente por las deudas y reclamos del negocio</td><td data-label="Registro">Sin registro estatal de formación. Un DBA (nombre comercial) si usa un nombre de negocio</td><td data-label="Impuestos">La ganancia va en su declaración personal (Schedule C) más el impuesto de trabajo por cuenta propia</td></tr>
+        <tr><th scope="row">General partnership (sociedad general)</th><td data-label="Conviene para">Dos o más dueños que empiezan de manera informal</td><td data-label="Responsabilidad">Cada socio responde personalmente, incluso por actos comerciales de los otros socios</td><td data-label="Registro">Por lo general sin registro de formación. Se recomienda mucho un acuerdo de sociedad por escrito</td><td data-label="Impuestos">La sociedad presenta una declaración informativa; la ganancia pasa a cada socio</td></tr>
+        <tr><th scope="row">LLC (compañía de responsabilidad limitada)</th><td data-label="Conviene para">La mayoría de los pequeños negocios que buscan protección de responsabilidad</td><td data-label="Responsabilidad">Por lo general limitada a lo que usted aporta, si mantiene separado el dinero del negocio y el personal</td><td data-label="Registro">Registro estatal, agente registrado y, por lo general, un informe anual o bienal</td><td data-label="Impuestos">Tributación transferida por defecto. Puede elegir el trato de S-corp cuando las ganancias justifiquen una nómina</td></tr>
+        <tr><th scope="row">Corporation (corporación)</th><td data-label="Conviene para">Reunir dinero de inversionistas o emitir acciones</td><td data-label="Responsabilidad">Por lo general limitada</td><td data-label="Registro">Más trámites: estatutos, junta directiva, actas, informes estatales</td><td data-label="Impuestos">La C-corp tributa por separado; la elección de S-corp transfiere la tributación</td></tr>
+      </tbody>`,
+  "sc.vc":`¿Busca capital de riesgo para una aplicación? Los inversionistas suelen esperar una C-corporation de Delaware. Si empieza como LLC, puede convertirla después. <a href="https://www.sba.gov/business-guide/launch-your-business/choose-business-structure" target="_blank" rel="noopener">Guía de la SBA sobre estructuras (en inglés) ↗</a>`,
+  "fd.kicker":"Empezar con poco o nada de dinero","fd.h2":"Una escalera de financiamiento realista","fd.lead":"Suba en orden. Cada escalón cuesta menos y arriesga menos que el siguiente.",
+  "fd.ladder":`<li><div><h3>No gaste lo que no necesita</h3><p>Valide primero con clientes reales: conversaciones, una página web sencilla, pedidos anticipados o una prueba piloto pagada. Use asesoría gratuita, planes gratuitos de software e investigación en la biblioteca antes de pagar por algo.</p></div></li>
+    <li><div><h3>Consiga sus primeros ingresos</h3><p>Una primera venta pequeña es la mejor prueba que puede mostrar a un prestamista o programa, y financia el siguiente paso sin deudas. Las cartas de intención firmadas también ayudan.</p></div></li>
+    <li><div><h3>Micropréstamos y prestamistas comunitarios</h3><p>Los micropréstamos de la SBA llegan hasta $50,000 a través de intermediarios sin fines de lucro. Las Community Development Financial Institutions (CDFI, instituciones financieras de desarrollo comunitario) suelen prestar a personas que los bancos rechazan. Son préstamos y deben pagarse. <a href="https://www.sba.gov/funding-programs/loans/microloans" target="_blank" rel="noopener">Micropréstamos de la SBA ↗</a> · <a href="https://www.cdfifund.gov" target="_blank" rel="noopener">CDFI Fund ↗</a></p></div></li>
+    <li><div><h3>Subvenciones, si de verdad califica</h3><p>Las subvenciones para negocios comunes con fines de lucro son raras y competitivas. Las reales suelen ser locales (ciudad, condado, fundaciones), de un sector específico o para tecnología basada en investigación a través de SBIR/STTR. <a href="https://www.sbir.gov" target="_blank" rel="noopener">SBIR.gov ↗</a> · <a href="https://www.grants.gov" target="_blank" rel="noopener">Grants.gov ↗</a></p></div></li>
+    <li><div><h3>Inversionistas y aceleradoras</h3><p>Para negocios hechos para crecer rápido. Espere ceder parte de la propiedad (equity) y lea las condiciones con cuidado antes de aceptar.</p></div></li>`,
+  "fd.qH":"Preguntas para cualquier programa",
+  "fd.qList":`<li>¿Están abiertas las solicitudes y cuál es la próxima fecha límite?</li>
+      <li>¿Puedo solicitar antes de registrar el negocio o de tener ingresos?</li>
+      <li>¿Es una subvención, un préstamo, una inversión o un reembolso?</li>
+      <li>¿Es gratis? Si no, ¿hay exenciones de pago o becas?</li>
+      <li>¿Necesito garantía, historial de crédito o fondos de contrapartida?</li>
+      <li>¿Qué documentos necesito para solicitar?</li>`,
+  "fd.qCopy":"Copiar preguntas",
+  "fd.scam":`<strong>Evite las estafas de subvenciones.</strong><span>Los programas de subvenciones reales nunca le piden pagar una tarifa para recibir dinero, y nadie puede garantizarle una subvención. Desconfíe de llamadas, mensajes o anuncios que prometen "dinero gratis del gobierno". <a href="https://consumer.ftc.gov/articles/government-grant-scams" target="_blank" rel="noopener">FTC: estafas de subvenciones del gobierno ↗</a></span>`,
+  "fq.kicker":"Respuestas claras","fq.h2":"Preguntas frecuentes",
+  "fq.q1":"¿Necesito una LLC para empezar?","fq.a1":"No. Puede operar legalmente como sole proprietor (empresa individual) en todos los estados, aunque quizá necesite un DBA (nombre comercial), licencias o permisos. Una LLC agrega protección de responsabilidad y algunos trámites. Muchas personas prueban una idea primero y forman una LLC cuando hay dinero o riesgo de por medio.",
+  "fq.q2":"¿En qué estado debo formar mi LLC?","fq.a2":"Por lo general, en el estado donde vive y trabaja. Formarla en otro lugar (Delaware, Wyoming, Nevada) no evita su estado: si opera allí, probablemente también tendrá que registrarse y pagar las tarifas de ambos estados. La principal excepción es una startup que busca capital de riesgo, que a menudo forma una corporación en Delaware.",
+  "fq.q3":"¿Cuesta algo obtener un EIN?","fq.a3":"No. El Employer Identification Number (EIN, número de identificación del empleador) es gratuito en el IRS y puede solicitarlo en línea en minutos. Los sitios que cobran por él son terceros. Necesita un EIN si tiene empleados o forma una LLC con varios miembros o una corporación, y los bancos suelen pedirlo.",
+  "fq.q4":"¿Registrar una LLC es lo mismo que obtener una licencia comercial?","fq.a4":"No. Formar una LLC crea la entidad legal. Las licencias y permisos son aparte, los emite su ciudad, condado o estado, y dependen de lo que hace y dónde lo hace.",
+  "fq.q5":"¿Qué es un registered agent (agente registrado)?","fq.a5":"Una persona o empresa con una dirección física en su estado que recibe documentos legales para su LLC o corporación. Por lo general puede ser su propio agente. La dirección se vuelve pública, así que algunos dueños pagan un servicio de agente por privacidad.",
+  "fq.q6":"¿Qué es un DBA?","fq.a6":"\"Doing business as\" (nombre comercial), también llamado assumed name o fictitious name (nombre supuesto o ficticio). Lo registra cuando opera con un nombre que no es su nombre legal ni el nombre exacto registrado de su LLC. Según el estado, se registra ante el estado o el condado.",
+  "fq.q7":"¿Debo abrir una cuenta bancaria separada?","fq.a7":"Sí. Mantener separado el dinero del negocio facilita mucho los impuestos y, en una LLC o corporación, ayuda a proteger la responsabilidad limitada.",
+  "fq.q8":"¿Cómo protejo el nombre de mi negocio?","fq.a8":`Registrarse en su estado impide que otra compañía registre el mismo nombre allí, pero no es una marca registrada. Busque en la base de datos federal de marcas antes de invertir en un nombre, logotipo o dominio. <a href="https://www.uspto.gov/trademarks/search" target="_blank" rel="noopener">Búsqueda de marcas de la USPTO ↗</a>`,
+  "fq.q9":"¿Quién es dueño del código, los diseños o el contenido que alguien crea para mí?","fq.a9":"Sin un acuerdo escrito que ceda los derechos a su negocio, un trabajador independiente o contratista por lo general conserva los derechos de autor de lo que crea. Use un contrato escrito con una cláusula de cesión de propiedad intelectual con cualquiera que cree su producto, logotipo o contenido.",
+  "fq.disclaimer":"Strike Right es información general, no asesoría legal, fiscal ni financiera. Los programas, tarifas y reglas cambian, así que confirme los detalles con la oficina oficial o con un asesor calificado antes de depender de ellos.",
+  "gd.kicker":"Decidir, financiar y planear","gd.h1":"Guías","gd.lead":"Estructuras de negocio, una escalera de financiamiento realista con preguntas para cualquier programa, y respuestas claras a preguntas frecuentes.","gd.j1":"Estructuras","gd.j2":"Financiamiento","gd.j3":"Preguntas frecuentes"
+});
+
+})(window.SR_ES);

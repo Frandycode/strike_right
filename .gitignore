@@ -24,3 +24,6 @@ tests/results/
 Thumbs.db
 Desktop.ini
 $RECYCLE.BIN/
+
+# Layout mockups for review (never committed)
+mockups/
