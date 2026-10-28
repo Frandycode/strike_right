@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<!--
+  Author: Frandy Slueue | Alias: CodeBreeder | Title: Software Engineering · DevOps Security · IT Ops
+  Portfolio: https://frandycode.dev | GitHub: https://github.com/frandycode
+  Email: frandyslueue@gmail.com | Location: Tulsa, OK & Dallas, TX (Central Time)
+  Project: Strike Right — Open Graph image source (rendered to public/og-image.png)
+-->
+<rect width="1200" height="630" fill="#e6ede8"/>
+<rect x="0" y="582" width="1200" height="48" fill="#1c6b4a"/>
+<g transform="translate(96 112) scale(6.2)">
+  <rect x="2" y="17" width="4.6" height="11" rx="1.2" fill="#1c6b4a"/><rect x="7.8" y="21.5" width="4.6" height="6.5" rx="1.2" fill="#1c6b4a"/><rect x="13.6" y="15" width="4.6" height="13" rx="1.2" fill="#1c6b4a"/><rect x="19.4" y="9" width="4.6" height="19" rx="1.2" fill="#1c6b4a"/><rect x="25.2" y="3" width="4.6" height="25" rx="1.2" fill="#d08a1c"/>
+</g>
+<text x="96" y="420" font-family="Archivo" font-weight="800" font-size="104" letter-spacing="-2" fill="#17221d">Strike <tspan fill="#1c6b4a">Right</tspan></text>
+<text x="100" y="486" font-family="Public Sans" font-weight="500" font-size="38" fill="#3f4c46">Start your business the right way. Free, for any U.S. state.</text>
+</svg>

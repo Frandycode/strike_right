@@ -1,0 +1,311 @@
+<!doctype html>
+<!--
+  Author: Frandy Slueue | Alias: CodeBreeder | Title: Software Engineering · DevOps Security · IT Ops
+  Portfolio: https://frandycode.dev | GitHub: https://github.com/frandycode
+  Email: frandyslueue@gmail.com | Location: Tulsa, OK & Dallas, TX (Central Time)
+  Project: Strike Right — single-page site markup
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Strike Right</title>
+<meta name="description" content="Strike Right is a free guide to starting any business in any U.S. state: a tailored checklist, LLC requirements by state, selling across states, marketing, letter templates and funding.">
+<link rel="canonical" href="https://strikeright.app/">
+<link rel="alternate" hreflang="en" href="https://strikeright.app/">
+<link rel="alternate" hreflang="es" href="https://strikeright.app/?lang=es">
+<link rel="alternate" hreflang="x-default" href="https://strikeright.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Strike Right">
+<meta property="og:title" content="Strike Right: start your business the right way">
+<meta property="og:description" content="A free, tailored checklist for starting any business in any U.S. state, plus LLC rules by state, free help, letters and funding.">
+<meta property="og:url" content="https://strikeright.app/">
+<meta property="og:image" content="https://strikeright.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Strike Right logo with the tagline: Start your business the right way.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Strike Right: start your business the right way">
+<meta name="twitter:description" content="A free, tailored checklist for starting any business in any U.S. state, plus LLC rules by state, free help, letters and funding.">
+<meta name="twitter:image" content="https://strikeright.app/og-image.png">
+<meta name="twitter:image:alt" content="Strike Right logo with the tagline: Start your business the right way.">
+<meta name="theme-color" content="#e6ede8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b100e" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script src="boot.js"></script>
+<script defer src="i18n-es.js"></script>
+<script defer src="app.js"></script>
+<!-- Cloudflare Web Analytics beacon; the token comes from the Cloudflare dashboard -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "ad37b2ec630a48abbdf9363bae0bf754"}'></script>
+</head>
+<body>
+<header class="band gut" id="top"><div class="wrap">
+  <div class="brandbar">
+    <a class="brand" href="#top" aria-label="Strike Right home" data-i18n-attr="aria-label=a.home"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="17" width="4.6" height="11" rx="1.2" class="mk-a"/><rect x="7.8" y="21.5" width="4.6" height="6.5" rx="1.2" class="mk-a"/><rect x="13.6" y="15" width="4.6" height="13" rx="1.2" class="mk-a"/><rect x="19.4" y="9" width="4.6" height="19" rx="1.2" class="mk-a"/><rect x="25.2" y="3" width="4.6" height="25" rx="1.2" class="mk-b"/></svg><span>Strike <em>Right</em></span></a>
+    <div class="tools js-only">
+      <div class="theme" role="group" aria-label="Language" data-i18n-attr="aria-label=a.lang"><button type="button" data-lang-set="en" lang="en">English</button><button type="button" data-lang-set="es" lang="es">Español</button></div>
+      <div class="theme" role="group" aria-label="Color theme" data-i18n-attr="aria-label=a.theme"><button type="button" data-theme-set="light" data-i18n="th.light">Light</button><button type="button" data-theme-set="dark" data-i18n="th.dark">Dark</button><button type="button" data-theme-set="auto" data-i18n="th.auto">Auto</button></div>
+    </div>
+  </div>
+  <noscript><p class="noscript-msg">Turn on JavaScript to tailor this guide to your state and business type.</p></noscript>
+  <div class="kicker" data-i18n="hd.kicker">Free · Any U.S. state · Any kind of business</div>
+  <h1 data-i18n="hd.h1">Start your business the right way</h1>
+  <p class="lead" data-i18n="hd.lead">A checklist built for your business, LLC requirements for every state, how to sell across state lines, how to win your first customers, and letters you can send today. Enter your ZIP or pick your state, then your city and business type.</p>
+  <div class="picker js-only" role="group" aria-label="Tailor this guide" data-i18n-attr="aria-label=a.picker">
+    <div class="pf"><label for="zip" data-i18n="pk.zip">ZIP code</label><input type="text" id="zip" inputmode="numeric" maxlength="5" placeholder="e.g. 74103" data-i18n-attr="placeholder=ph.zip" autocomplete="postal-code"><span class="zip-hint" id="zipHint" aria-live="polite">Fills in your state</span></div>
+    <div class="pf"><label for="state" data-i18n="pk.state">Your state</label><select id="state"></select></div>
+    <div class="pf"><label for="city" data-i18n="pk.city">Your city or town</label><input type="text" id="city" placeholder="e.g. Springfield" data-i18n-attr="placeholder=ph.city" autocomplete="address-level2"></div>
+    <div class="pf"><label for="btype" data-i18n="pk.type">Type of business</label><select id="btype"></select></div>
+    <div class="pf"><label for="where" data-i18n="pk.where">Where you'll work</label><select id="where"><option value="home" data-i18n="wh.home">From home</option><option value="online" data-i18n="wh.online">Online only</option><option value="site" data-i18n="wh.site">Storefront, office or shared space</option><option value="mobile" data-i18n="wh.mobile">On the road / at clients' sites</option></select></div>
+    <label class="chk"><input type="checkbox" id="hire"> <span data-i18n="pk.hire">I plan to hire</span></label>
+  </div>
+  <p class="free-note" data-i18n="hd.free">No sign-up. Your choices, checkmarks and letter drafts stay in this browser only.</p>
+</div></header>
+
+<nav class="nav gut" aria-label="Sections" data-i18n-attr="aria-label=a.sections"><div class="wrap" id="navlinks">
+  <a href="#checklist" data-i18n="nv.checklist">Checklist</a><a href="#help" data-i18n="nv.help">Free help</a><a href="#llc" data-i18n="nv.llc">LLC by state</a><a href="#states" data-i18n="nv.states">Selling across states</a><a href="#grow" data-i18n="nv.grow">Get known</a><a href="#letters" data-i18n="nv.letters">Letter builder</a><a href="#structure" data-i18n="nv.structure">Structures</a><a href="#funding" data-i18n="nv.funding">Funding</a><a href="#faq" data-i18n="nv.faq">FAQ</a><a href="#about" data-i18n="nv.about">About</a>
+</div></nav>
+
+<div class="gut"><main class="wrap">
+
+<section id="checklist">
+  <div class="head">
+    <div><div class="kicker" data-i18n="ck.kicker">Your plan</div><h2 id="planTitle">Starting checklist</h2><p class="muted" id="planLead"></p></div>
+    <div class="progress-wrap js-only"><div class="plabel" id="plabel">0 of 0 done</div><div class="pbar"><span id="pbar"></span></div>
+      <div class="row mt-10"><button type="button" class="btn" id="copyPlan" data-i18n="ck.copy">Copy checklist</button><button type="button" class="btn" id="toggleAll">Expand all</button><button type="button" class="btn" id="clearPlan" data-i18n="ck.clear">Clear checks</button></div>
+      <div class="row mt-8"><button type="button" class="btn" id="copyLink" data-i18n="ck.link">Copy link to my plan</button><button type="button" class="btn" data-print-target="checklist" data-i18n="pr.btn">Print or save as PDF</button></div></div>
+  </div>
+  <div class="panel" id="phases"><div class="pad stack fallback">
+    <h3>Step 1: Get free help</h3>
+    <h3>Step 2: Shape the idea</h3>
+    <h3>Step 3: Make it official</h3>
+    <h3>Step 4: Licenses, permits &amp; taxes</h3>
+    <h3>Step 5: Protect your money</h3>
+    <h3>Step 6: Launch and get known</h3>
+  </div></div>
+</section>
+
+<section id="help">
+  <div class="head"><div><div class="kicker" data-i18n="hp.kicker">No cost or low cost</div><h2 data-i18n="hp.h2">Help matched to your business</h2><p class="muted" id="helpLead"></p></div></div>
+  <div id="helpGroups"><div class="panel pad stack fallback">
+    <h3>Free help in every state</h3>
+    <ul class="clean">
+      <li><a href="https://americassbdc.org" target="_blank" rel="noopener">Small Business Development Centers ↗</a></li>
+      <li><a href="https://www.score.org/find-mentor" target="_blank" rel="noopener">SCORE: find a free mentor ↗</a></li>
+      <li><a href="https://www.sba.gov/local-assistance/find" target="_blank" rel="noopener">SBA local assistance: Women's Business Centers and Veterans Business Outreach Centers ↗</a></li>
+      <li><a href="https://www.sba.gov/business-guide" target="_blank" rel="noopener">SBA Business Guide ↗</a></li>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" target="_blank" rel="noopener">IRS: get a free EIN ↗</a></li>
+      <li><a href="https://www.nass.org/initiatives/business-services" target="_blank" rel="noopener">Your state's business filing office ↗</a></li>
+      <li><a href="https://www.careeronestop.org/Toolkit/Training/find-licenses.aspx" target="_blank" rel="noopener">Licensed occupations finder ↗</a></li>
+    </ul>
+  </div></div>
+  <p class="small muted" data-i18n="hp.also">Also check your city or county economic development office, your chamber of commerce, community colleges and the public library. Many run free workshops and keep lists of local grants.</p>
+</section>
+
+<section id="llc">
+  <div class="head"><div><div class="kicker" data-i18n="lc.kicker">Forming an LLC</div><h2 data-i18n="lc.h2">What it takes to form an LLC in each state</h2><p class="muted" data-i18n="lc.lead">Pick a state to see its filing fee, ongoing reports and special rules, plus everything to have ready before you file.</p></div>
+    <div class="field minw-220 js-only"><label for="llcState" data-i18n="lc.state">State</label><select id="llcState"></select></div></div>
+  <div class="llc-top">
+    <div class="panel pad stack js-only" id="llcCard"></div>
+    <div class="panel pad stack">
+      <h3 data-i18n="lc.needH">What you need before you file (every state)</h3>
+      <ul class="clean" data-i18n="lc.needList">
+        <li><strong>A unique name</strong> ending in "LLC," "L.L.C." or "Limited Liability Company." Check the state's business name search first.</li>
+        <li><strong>A registered agent</strong> with a physical street address in that state (no P.O. boxes), available during business hours. You can be your own agent.</li>
+        <li><strong>A principal business address</strong>, which can be in another state. Filings are public, so some owners use a business address instead of home.</li>
+        <li><strong>Organizer and member or manager names</strong>, depending on the state's form.</li>
+        <li><strong>Management choice</strong>: member-managed (owners run it) or manager-managed.</li>
+        <li><strong>The filing fee</strong>, paid online by card in most states.</li>
+      </ul>
+      <h3 data-i18n="lc.afterH">Right after you file</h3>
+      <ul class="clean" data-i18n="lc.afterList">
+        <li>Get a free <a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" target="_blank" rel="noopener">EIN from the IRS ↗</a>.</li>
+        <li>Sign an operating agreement. New York requires a written one; every LLC should have one, especially with more than one owner.</li>
+        <li>Open a business bank account and keep business money separate.</li>
+        <li>Put the annual report or tax due date on your calendar. Missing it can get the LLC dissolved.</li>
+        <li>Register for state taxes and get any licenses your work needs.</li>
+        <li>Federal beneficial ownership (BOI) reports: FinCEN now exempts companies formed in the U.S. Check <a href="https://www.fincen.gov/boi" target="_blank" rel="noopener">fincen.gov ↗</a> for changes.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row mt-14 js-only"><button type="button" class="btn" data-print-target="llc" data-i18n="pr.btn">Print or save as PDF</button></div>
+  <details class="panel plain mt-14 js-only">
+    <summary><strong data-i18n="lc.compare">Compare all 50 states + DC</strong><span class="chev" aria-hidden="true"></span></summary>
+    <div class="details-body">
+      <div class="row mb-10"><input class="input mw-260" type="search" id="llcFilter" placeholder="Filter states…" aria-label="Filter states" data-i18n-attr="placeholder=ph.filter,aria-label=ph.filter"><span class="small muted" data-i18n="lc.sortHint">Tap a column heading to sort.</span></div>
+      <div class="scroll-table panel" tabindex="0" role="region" aria-label="LLC requirements, all states" data-i18n-attr="aria-label=a.llcTable"><table id="llcTable"><thead><tr><th scope="col"><button type="button" data-sort="name" data-i18n="lc.thState">State ↕</button></th><th scope="col"><button type="button" data-sort="fee" data-i18n="lc.thFee">Filing fee ↕</button></th><th scope="col"><button type="button" data-sort="ann" data-i18n="lc.thAnn">Ongoing ↕</button></th><th scope="col" data-i18n="lc.thReport">Report</th><th scope="col" data-i18n="lc.thRules">Special rules</th></tr></thead><tbody></tbody></table></div>
+    </div>
+  </details>
+  <p class="small muted mt-12"><span id="llcAsOf">State fees as listed in October 2026.</span> <span data-i18n="lc.feeNote">Online, mail and expedite fees can differ, and fees change. Confirm on your state's official site before you pay.</span> <a href="https://www.nass.org/initiatives/business-services" target="_blank" rel="noopener" data-i18n="lc.findOffice">Find your state's filing office ↗</a></p>
+  <div class="fresh" data-fresh="llc"></div>
+</section>
+
+<section id="states">
+  <div class="head"><div><div class="kicker" data-i18n="st.kicker">Going beyond your home state</div><h2 data-i18n="st.h2">Selling in all states or selected states</h2><p class="muted" data-i18n="st.lead">Where you sell changes what you register, which taxes you collect and which rules apply. Choose your reach to see what applies to your business.</p></div></div>
+  <div class="panel pad stack js-only">
+    <div class="row"><strong class="fs-92" data-i18n="st.where">Where will you sell?</strong>
+      <div class="seg" id="reach" role="group" aria-label="Where you'll sell" data-i18n-attr="aria-label=a.reach"><button type="button" data-reach="home" data-i18n="st.home">Only my state</button><button type="button" data-reach="some" data-i18n="st.some">Selected states</button><button type="button" data-reach="all" data-i18n="st.all">All states</button></div></div>
+    <div id="pickWrap" hidden>
+      <div class="row mb-8"><span class="small muted" id="pickCount"></span><button type="button" class="btn" id="pickNone" data-i18n="st.clear">Clear</button></div>
+      <div class="state-grid" id="pickGrid"></div>
+    </div>
+  </div>
+  <div class="stack mt-14" id="reachOut"></div>
+</section>
+
+<section id="grow">
+  <div class="head"><div><div class="kicker" data-i18n="gr.kicker">First customers</div><h2 data-i18n="gr.h2">Pilots, trials, promotions and getting known</h2><p class="muted" id="growLead"></p></div></div>
+  <div class="tabs js-only" role="tablist" aria-label="Get known topics" data-i18n-attr="aria-label=a.tabs" id="growTabs">
+    <button type="button" role="tab" id="tab-pilot" aria-controls="panel-pilot" aria-selected="true" data-i18n="gr.tPilot">Pilots</button>
+    <button type="button" role="tab" id="tab-trial" aria-controls="panel-trial" aria-selected="false" data-i18n="gr.tTrial">Trials &amp; offers</button>
+    <button type="button" role="tab" id="tab-promo" aria-controls="panel-promo" aria-selected="false" data-i18n="gr.tPromo">Promotions &amp; launch</button>
+    <button type="button" role="tab" id="tab-chan" aria-controls="panel-chan" aria-selected="false" data-i18n="gr.tChan">Get discovered</button>
+    <button type="button" role="tab" id="tab-rules" aria-controls="panel-rules" aria-selected="false" data-i18n="gr.tRules">Marketing rules</button>
+  </div>
+  <div role="tabpanel" id="panel-pilot" aria-labelledby="tab-pilot" tabindex="0"></div>
+  <div role="tabpanel" id="panel-trial" aria-labelledby="tab-trial" tabindex="0" hidden></div>
+  <div role="tabpanel" id="panel-promo" aria-labelledby="tab-promo" tabindex="0" hidden></div>
+  <div role="tabpanel" id="panel-chan" aria-labelledby="tab-chan" tabindex="0" hidden></div>
+  <div role="tabpanel" id="panel-rules" aria-labelledby="tab-rules" tabindex="0" hidden></div>
+</section>
+
+<section id="letters">
+  <div class="head"><div><div class="kicker" data-i18n="lt.kicker">Ready to send</div><h2 data-i18n="lt.h2">Business letter builder</h2><p class="muted" data-i18n="lt.lead">Pick a letter, fill in the details and copy a finished business letter or email. It uses your state, city and business type from the top of the page.</p></div></div>
+  <div class="letter-grid js-only">
+    <div class="panel pad">
+      <div class="form" id="letterForm">
+        <div class="field full"><label for="lType" data-i18n="lt.type">Letter type</label><select id="lType">
+          <option value="advice" data-i18n="lo.advice">Request for free advising</option>
+          <option value="pilot" data-i18n="lo.pilot">Pilot proposal to a potential customer</option>
+          <option value="intro" data-i18n="lo.intro">Introduction to a potential customer</option>
+          <option value="partner" data-i18n="lo.partner">Partnership or sponsorship request</option>
+          <option value="loi" data-i18n="lo.loi">Letter of intent (for a customer to sign)</option>
+          <option value="program" data-i18n="lo.program">Grant or program inquiry</option>
+          <option value="followup" data-i18n="lo.followup">Follow-up after a meeting</option>
+        </select><span class="hint" id="lTypeHint"></span></div>
+        <div class="field"><label for="lName" data-i18n="lt.name">Your name</label><input id="lName" type="text" autocomplete="name"></div>
+        <div class="field"><label for="lTitle" data-i18n="lt.title">Your title</label><input id="lTitle" type="text" placeholder="Founder" data-i18n-attr="placeholder=ph.title"></div>
+        <div class="field"><label for="lBiz" data-i18n="lt.biz">Business name</label><input id="lBiz" type="text" autocomplete="organization"></div>
+        <div class="field"><label for="lContact" data-i18n="lt.contact">Email and/or phone</label><input id="lContact" type="text"></div>
+        <div class="field full"><label for="lWhat" data-i18n="lt.what">What you offer, in one phrase</label><input id="lWhat" type="text" placeholder="e.g. a scheduling app that cuts no-shows for small clinics" data-i18n-attr="placeholder=ph.what"></div>
+        <div class="field"><label for="lToName" data-i18n="lt.toName">Recipient name</label><input id="lToName" type="text"></div>
+        <div class="field"><label for="lToTitle" data-i18n="lt.toTitle">Recipient title</label><input id="lToTitle" type="text"></div>
+        <div class="field full"><label for="lToOrg" data-i18n="lt.toOrg">Recipient organization</label><input id="lToOrg" type="text"></div>
+        <div class="full form" id="extraWrap"></div>
+      </div>
+    </div>
+    <div class="paper-wrap">
+      <div class="paper" id="letterOut" aria-live="polite"></div>
+      <div class="row"><button type="button" class="btn primary" id="copyLetter" data-i18n="lt.copy">Copy letter</button><button type="button" class="btn" id="copyEmail" data-i18n="lt.copyEmail">Copy as email</button><button type="button" class="btn" id="clearLetter" data-i18n="lt.clear">Clear fields</button><button type="button" class="btn" data-print-target="letters" data-i18n="pr.btn">Print or save as PDF</button><span class="status-msg" id="letterMsg" role="status"></span></div>
+      <p class="small muted" data-i18n="lt.note">Blanks show as [brackets] until you fill them in. Letters of intent are written as non-binding; have anything binding reviewed by a lawyer or a free legal clinic.</p>
+    </div>
+  </div>
+</section>
+
+<section id="structure">
+  <div class="head"><div><div class="kicker" data-i18n="sc.kicker">Decide before you file</div><h2 data-i18n="sc.h2">Business structures compared</h2><p class="muted" data-i18n="sc.lead">You can start simple and change later. Ask a free adviser which fits before paying any filing fee.</p></div></div>
+  <div class="panel table-wrap struct" tabindex="0" role="region" aria-label="Business structures compared" data-i18n-attr="aria-label=a.structTable">
+    <table data-i18n="sc.table">
+      <thead><tr><th scope="col">Structure</th><th scope="col">Good for</th><th scope="col">Personal liability</th><th scope="col">Filing &amp; upkeep</th><th scope="col">Taxes (default)</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Sole proprietorship</th><td data-label="Good for">Testing an idea alone, low-risk work</td><td data-label="Liability">You're personally responsible for business debts and claims</td><td data-label="Filing">No state formation filing. A DBA if you use a business name</td><td data-label="Taxes">Profit goes on your personal return (Schedule C) plus self-employment tax</td></tr>
+        <tr><th scope="row">General partnership</th><td data-label="Good for">Two or more owners starting informally</td><td data-label="Liability">Each partner is personally responsible, including for other partners' business acts</td><td data-label="Filing">Usually no formation filing. A written partnership agreement is strongly advised</td><td data-label="Taxes">Partnership files an information return; profit passes to each partner</td></tr>
+        <tr><th scope="row">LLC</th><td data-label="Good for">Most small businesses wanting liability protection</td><td data-label="Liability">Generally limited to what you put in, if you keep business and personal money separate</td><td data-label="Filing">State filing, registered agent, usually an annual or biennial report</td><td data-label="Taxes">Passes through by default. Can elect S-corp treatment once profits justify payroll</td></tr>
+        <tr><th scope="row">Corporation</th><td data-label="Good for">Raising investor money or issuing shares</td><td data-label="Liability">Generally limited</td><td data-label="Filing">Most paperwork: bylaws, board, minutes, state reports</td><td data-label="Taxes">C-corp is taxed separately; S-corp election passes through</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small muted mt-12" data-i18n="sc.vc">Raising venture capital for an app? Investors usually expect a Delaware C-corporation. If you start as an LLC, you can convert later. <a href="https://www.sba.gov/business-guide/launch-your-business/choose-business-structure" target="_blank" rel="noopener">SBA guide to structures ↗</a></p>
+</section>
+
+<section id="funding">
+  <div class="head"><div><div class="kicker" data-i18n="fd.kicker">Starting with little or no money</div><h2 data-i18n="fd.h2">A realistic funding ladder</h2><p class="muted" data-i18n="fd.lead">Climb in order. Each step costs less and risks less than the one after it.</p></div></div>
+  <ol class="ladder panel" data-i18n="fd.ladder">
+    <li><div><h3>Spend nothing you don't have to</h3><p>Validate with real customers first: conversations, a simple landing page, pre-orders or a paid pilot. Use free advising, free software tiers and library research before paying for anything.</p></div></li>
+    <li><div><h3>Earn your first revenue</h3><p>A small first sale is the strongest proof you can show a lender or program, and it funds the next step without debt. Signed letters of intent help too.</p></div></li>
+    <li><div><h3>Microloans and community lenders</h3><p>SBA microloans go up to $50,000 through nonprofit intermediaries. Community Development Financial Institutions (CDFIs) often lend to people banks turn down. These are loans and must be repaid. <a href="https://www.sba.gov/funding-programs/loans/microloans" target="_blank" rel="noopener">SBA microloans ↗</a> · <a href="https://www.cdfifund.gov" target="_blank" rel="noopener">CDFI Fund ↗</a></p></div></li>
+    <li><div><h3>Grants, where you genuinely qualify</h3><p>Grants for ordinary for-profit startups are rare and competitive. Real ones tend to be local (city, county, foundations), sector-specific, or for research-based technology through SBIR/STTR. <a href="https://www.sbir.gov" target="_blank" rel="noopener">SBIR.gov ↗</a> · <a href="https://www.grants.gov" target="_blank" rel="noopener">Grants.gov ↗</a></p></div></li>
+    <li><div><h3>Investors and accelerators</h3><p>Fits businesses built to grow fast. Expect to give up equity, and read terms carefully before accepting.</p></div></li>
+  </ol>
+  <div class="grid2 mt-14">
+    <div class="panel pad stack"><h3 data-i18n="fd.qH">Questions to ask any program</h3><ul class="clean" id="qList" data-i18n="fd.qList">
+      <li>Are applications open now, and when is the next deadline?</li>
+      <li>Can I apply before registering the business or earning revenue?</li>
+      <li>Is this a grant, a loan, an investment or a reimbursement?</li>
+      <li>Is it free? If not, are fee waivers or scholarships available?</li>
+      <li>Do I need collateral, a credit history or matching funds?</li>
+      <li>Which documents do I need to apply?</li>
+    </ul><div class="row"><button type="button" class="btn" data-copy-list="qList" data-i18n="fd.qCopy">Copy questions</button></div></div>
+    <div class="note stack" data-i18n="fd.scam"><strong>Avoid grant scams.</strong><span>Real grant programs never ask you to pay a fee to receive money, and no one can guarantee you a grant. Be wary of calls, texts or ads promising "free government money." <a href="https://consumer.ftc.gov/articles/government-grant-scams" target="_blank" rel="noopener">FTC: government grant scams ↗</a></span></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="head"><div><div class="kicker" data-i18n="fq.kicker">Plain answers</div><h2 data-i18n="fq.h2">Common questions</h2></div></div>
+  <div class="panel faq">
+    <details><summary data-i18n="fq.q1">Do I need an LLC to start?</summary><div class="a" data-i18n="fq.a1">No. You can legally operate as a sole proprietor in every state, though you may need a DBA, licenses or permits. An LLC adds liability protection and some paperwork. Many people test an idea first, then form an LLC once money or risk is involved.</div></details>
+    <details><summary data-i18n="fq.q2">Which state should I form my LLC in?</summary><div class="a" data-i18n="fq.a2">Usually the state where you live and work. Forming elsewhere (Delaware, Wyoming, Nevada) doesn't avoid your home state: if you operate at home you'll likely have to register there too and pay both states' fees. The main exception is a startup raising venture capital, which often forms a Delaware corporation.</div></details>
+    <details><summary data-i18n="fq.q3">Does getting an EIN cost anything?</summary><div class="a" data-i18n="fq.a3">No. An Employer Identification Number is free from the IRS, and you can apply online in minutes. Sites that charge for one are third parties. You need an EIN if you have employees or form a multi-member LLC or corporation, and banks often ask for one.</div></details>
+    <details><summary data-i18n="fq.q4">Is filing an LLC the same as getting a business license?</summary><div class="a" data-i18n="fq.a4">No. Forming an LLC creates the legal entity. Licenses and permits are separate, come from your city, county or state, and depend on what you do and where you do it.</div></details>
+    <details><summary data-i18n="fq.q5">What's a registered agent?</summary><div class="a" data-i18n="fq.a5">A person or company with a physical street address in your state who accepts legal papers for your LLC or corporation. You can usually be your own agent. The address becomes public record, so some owners use a paid agent service for privacy.</div></details>
+    <details><summary data-i18n="fq.q6">What's a DBA?</summary><div class="a" data-i18n="fq.a6">"Doing business as," also called an assumed or fictitious name. You file one when you operate under a name that isn't your legal name or your LLC's exact registered name. Depending on the state, it's filed with the state or the county.</div></details>
+    <details><summary data-i18n="fq.q7">Should I open a separate bank account?</summary><div class="a" data-i18n="fq.a7">Yes. Keeping business money separate makes taxes far easier, and for an LLC or corporation it helps protect the liability shield.</div></details>
+    <details><summary data-i18n="fq.q8">How do I protect my business name?</summary><div class="a" data-i18n="fq.a8">Registering with your state stops another company from registering the identical name there, but it isn't a trademark. Search the federal trademark database before you invest in a name, logo or domain. <a href="https://www.uspto.gov/trademarks/search" target="_blank" rel="noopener">USPTO trademark search ↗</a></div></details>
+    <details><summary data-i18n="fq.q9">Who owns the code, designs or content someone builds for me?</summary><div class="a" data-i18n="fq.a9">Without a written agreement assigning the rights to your business, a freelancer or contractor usually keeps the copyright to what they create. Use a written contract with an IP assignment clause for anyone who builds your product, logo or content.</div></details>
+  </div>
+  <div class="note mt-14" data-i18n="fq.disclaimer">Strike Right is general information, not legal, tax or financial advice. Programs, fees and rules change, so confirm details with the official office or a qualified adviser before you rely on them.</div>
+</section>
+
+<section id="about">
+  <div class="head"><div><div class="kicker" data-i18n="ab.kicker">About</div><h2 data-i18n="ab.h2">About Strike Right</h2></div></div>
+  <div class="panel pad about">
+    <div class="about-brand"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="17" width="4.6" height="11" rx="1.2" class="mk-a"/><rect x="7.8" y="21.5" width="4.6" height="6.5" rx="1.2" class="mk-a"/><rect x="13.6" y="15" width="4.6" height="13" rx="1.2" class="mk-a"/><rect x="19.4" y="9" width="4.6" height="19" rx="1.2" class="mk-a"/><rect x="25.2" y="3" width="4.6" height="25" rx="1.2" class="mk-b"/></svg></div>
+    <div class="stack">
+      <p data-i18n="ab.p1">Strike Right is a free guide for anyone starting a business in the United States. It turns scattered official information into one plan: what to file, which licenses apply, where to get free help, and how to win your first customers, tailored to your state, city and type of business.</p>
+      <p class="muted" data-i18n="ab.p2">No sign-up and no cost. Your choices stay in your own browser. Strike Right is general information, not legal, tax or financial advice.</p>
+      <div class="privacy" id="privacy">
+        <h3 data-i18n="ab.privH">Privacy</h3>
+        <ul class="clean" data-i18n="ab.privList">
+          <li>There are no accounts and nothing to sign up for.</li>
+          <li>Your choices, checkmarks and letter drafts are stored only in your own browser (local storage). You can clear them any time by clearing this site's data.</li>
+          <li>Nothing you enter is sent to a server. A plan link you copy holds your ZIP, state, city and choices, never letter fields, names, emails or phone numbers.</li>
+          <li>Page counts come from Cloudflare Web Analytics, which doesn't use cookies. Fonts load from Google Fonts.</li>
+        </ul>
+      </div>
+      <div class="credit-block">
+        <p><strong>Strike Right</strong> created by Frandy Slueue, a production of <a href="https://codebreeder.dev/" target="_blank" rel="noopener">CodeBreeder LLC</a>.</p>
+        <p class="muted">© 2026 CodeBreeder LLC. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main></div>
+
+<footer class="gut"><div class="wrap">
+  <div class="fgrid">
+    <div class="fbrand">
+      <a class="brand" href="#top"><svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="17" width="4.6" height="11" rx="1.2" class="mk-a"/><rect x="7.8" y="21.5" width="4.6" height="6.5" rx="1.2" class="mk-a"/><rect x="13.6" y="15" width="4.6" height="13" rx="1.2" class="mk-a"/><rect x="19.4" y="9" width="4.6" height="19" rx="1.2" class="mk-a"/><rect x="25.2" y="3" width="4.6" height="25" rx="1.2" class="mk-b"/></svg><span>Strike <em>Right</em></span></a>
+      <p data-i18n="ft.p">A free guide to starting any kind of business in any U.S. state. Start with free advice, confirm the rules where you live, and spend carefully.</p>
+    </div>
+    <nav class="fcol" aria-label="Guide" data-i18n-attr="aria-label=ft.guide"><h4 data-i18n="ft.guide">Guide</h4><ul>
+      <li><a href="#checklist" data-i18n="nv.checklist">Checklist</a></li><li><a href="#llc" data-i18n="nv.llc">LLC by state</a></li><li><a href="#states" data-i18n="nv.states">Selling across states</a></li><li><a href="#grow" data-i18n="nv.grow">Get known</a></li><li><a href="#letters" data-i18n="nv.letters">Letter builder</a></li><li><a href="#faq" data-i18n="nv.faq">FAQ</a></li><li><a href="#about" data-i18n="nv.about">About</a></li>
+    </ul></nav>
+    <nav class="fcol" aria-label="Official resources" data-i18n-attr="aria-label=ft.official"><h4 data-i18n="ft.official">Official resources</h4><ul>
+      <li><a href="https://www.sba.gov/business-guide" target="_blank" rel="noopener" data-i18n="ft.sba">SBA Business Guide ↗</a></li>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/get-an-employer-identification-number" target="_blank" rel="noopener" data-i18n="ft.ein">IRS: free EIN ↗</a></li>
+      <li><a href="https://www.nass.org/initiatives/business-services" target="_blank" rel="noopener" data-i18n="ft.nass">State filing offices ↗</a></li>
+      <li><a href="https://americassbdc.org" target="_blank" rel="noopener" data-i18n="ft.sbdc">Find your SBDC ↗</a></li>
+    </ul></nav>
+  </div>
+  <div class="credits"><span>© 2026 CodeBreeder LLC. All Rights Reserved.</span></div>
+</div></footer>
+
+<button type="button" class="to-top" id="toTop" aria-label="Back to top" title="Back to top" data-i18n-attr="aria-label=a.top,title=a.top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+</body>
+</html>

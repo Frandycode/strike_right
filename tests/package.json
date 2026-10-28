@@ -1,0 +1,18 @@
+{
+  "name": "strike-right-tests",
+  "private": true,
+  "description": "Strike Right test and build tooling (never deployed)",
+  "scripts": {
+    "og": "node tools/render-og.js",
+    "test": "node run-tests.js",
+    "serve": "wrangler dev --config ../wrangler.jsonc --port 8787",
+    "test:log": "node run-tests.js --log results/run.txt",
+    "test:exitcheck": "node check-exit-code.js"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "lighthouse": "^12.8.2",
+    "playwright": "^1.56.1",
+    "wrangler": "^4.45.0"
+  }
+}

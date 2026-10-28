@@ -1,0 +1,76 @@
+# Author: Frandy Slueue | Alias: CodeBreeder | Title: Software Engineering · DevOps Security · IT Ops
+# Portfolio: https://frandycode.dev | GitHub: https://github.com/frandycode
+# Email: frandyslueue@gmail.com | Location: Tulsa, OK & Dallas, TX (Central Time)
+# Project: Strike Right — pull request and main branch test workflow
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CI: 'true'
+      WRANGLER_SEND_METRICS: 'false'
+      WRANGLER_LOG_PATH: ${{ runner.temp }}/strike-right-wrangler-debug.log
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: tests/package-lock.json
+
+      - name: Install test dependencies
+        working-directory: tests
+        run: npm ci
+
+      - name: Install Chromium and system dependencies
+        working-directory: tests
+        run: npx --no-install playwright install --with-deps chromium
+
+      - name: Start local Worker and wait for readiness
+        shell: bash
+        run: |
+          tests/node_modules/.bin/wrangler dev --config wrangler.jsonc --port 8787 > "$RUNNER_TEMP/strike-right-wrangler.log" 2>&1 &
+          wrangler_pid=$!
+          for attempt in {1..60}; do
+            if ! kill -0 "$wrangler_pid" 2>/dev/null; then
+              cat "$RUNNER_TEMP/strike-right-wrangler.log"
+              exit 1
+            fi
+            if curl --fail --silent --output /dev/null --max-time 2 http://localhost:8787/; then
+              exit 0
+            fi
+            sleep 1
+          done
+          cat "$RUNNER_TEMP/strike-right-wrangler.log"
+          echo 'Local Worker did not become ready.' >&2
+          exit 1
+
+      - name: Run full test suite
+        working-directory: tests
+        run: npm run test:log
+
+      - name: Upload test log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: strike-right-test-log
+          path: tests/results/run.txt
+          if-no-files-found: warn
+          retention-days: 14

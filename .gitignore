@@ -1,0 +1,26 @@
+# Author: Frandy Slueue | Alias: CodeBreeder | Title: Software Engineering · DevOps Security · IT Ops
+# Portfolio: https://frandycode.dev | GitHub: https://github.com/frandycode
+# Email: frandyslueue@gmail.com | Location: Tulsa, OK & Dallas, TX (Central Time)
+# Project: Strike Right — files kept out of version control
+node_modules/
+tests/node_modules/
+test-results/
+playwright-report/
+.wrangler/
+.dev.vars
+.dev.vars.*
+.env*
+tests/results/
+
+# Local dot-directories; keep shared workflows
+/.*/
+!/.github/
+
+# Operating system files
+.DS_Store
+._*
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
