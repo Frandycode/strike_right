@@ -20,7 +20,6 @@ jobs:
     env:
       CI: 'true'
       WRANGLER_SEND_METRICS: 'false'
-      WRANGLER_LOG_PATH: ${{ runner.temp }}/strike-right-wrangler-debug.log
 
     steps:
       - name: Check out repository
@@ -45,6 +44,8 @@ jobs:
 
       - name: Start local Worker and wait for readiness
         shell: bash
+        env:
+          WRANGLER_LOG_PATH: ${{ runner.temp }}/strike-right-wrangler-debug.log
         run: |
           tests/node_modules/.bin/wrangler dev --config wrangler.jsonc --port 8787 > "$RUNNER_TEMP/strike-right-wrangler.log" 2>&1 &
           wrangler_pid=$!
