@@ -73,6 +73,8 @@ This check expects the site to be unavailable and verifies that `test:log` fails
 
 ## Deployment
 
+Deployed automatically from main via Cloudflare Workers Builds.
+
 `wrangler.jsonc` configures the existing Cloudflare Worker named `strike-right` to serve only `public/`. There is no site compilation step. Tests, logs and repository documentation are outside the deployment directory.
 
 From the project root, after installing the test/tooling dependencies:
